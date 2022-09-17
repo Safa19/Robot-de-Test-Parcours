@@ -1,0 +1,297 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1240,1313" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="62">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="552,1248" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_data1" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ReadRange AddHeaders="True" DataTable="[dt_data1]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="510,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet" WorkbookPath="C:\Users\safac\Downloads\GeoProd_data.xlsx">
+      <ui:ReadRange.Range>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </ui:ReadRange.Range>
+    </ui:ReadRange>
+    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="510,1029" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://beta.geoprod.com/gestion-utilisateurs/fiche/nouveau">
+      <ui:OpenBrowser.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,928" sap2010:WorkflowViewState.IdRef="Sequence_14">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_data1]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,836" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,722" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="Civilité" />
+                      <Variable x:TypeArguments="x:String" Name="Matricule" />
+                      <Variable x:TypeArguments="x:String" Name="User" />
+                      <Variable x:TypeArguments="x:String" Name="Identité" />
+                      <Variable x:TypeArguments="x:String" Name="Nom" />
+                      <Variable x:TypeArguments="x:String" Name="Prenom" />
+                      <Variable x:TypeArguments="x:String" Name="Naisance" />
+                      <Variable x:TypeArguments="x:String" Name="Email" />
+                      <Variable x:TypeArguments="x:String" Name="Mdp" />
+                      <Variable x:TypeArguments="x:String" Name="Organisme" />
+                      <Variable x:TypeArguments="x:String" Name="Role" />
+                      <Variable x:TypeArguments="x:String" Name="IP" />
+                      <Variable x:TypeArguments="x:String" Name="Identifiant" />
+                      <Variable x:TypeArguments="x:String" Name="in_serveur" />
+                      <Variable x:TypeArguments="x:String" Name="in_port" />
+                      <Variable x:TypeArguments="x:String" Name="out_serveur" />
+                      <Variable x:TypeArguments="x:String" Name="out_port" />
+                      <Variable x:TypeArguments="x:String" Name="SSL" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Date de naissance" DisplayName="Invoke Add_User workflow" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Robot\Add_User.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <InArgument x:TypeArguments="x:String" x:Key="Civilité">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Civilité&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Matricule">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Matricule&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Identité">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Identité&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Nom">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Nom&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Prenom">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Prenom&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Naissance">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Date_Naissance&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Email">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Email&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Mdp">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Mdp&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Organisme">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Organisme&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Role">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Role&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="IP">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;IP&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="User">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Type&quot;).ToString" />
+                        </InArgument>
+                      </ui:InvokeWorkflowFile.Arguments>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:InvokeWorkflowFile>
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Robot\Inforamtions webmail.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <InArgument x:TypeArguments="x:String" x:Key="Identifiant">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Identifiant&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Mdp">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Mdp&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_serveur">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;in_serveur&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_port">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;in_port&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="out_serveur">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;out_serveur&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="out_port">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;out_port&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="SSL">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;SSL&quot;).ToString" />
+                        </InArgument>
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Sélectionner une image" DisplayName="Invoke Informations étendues workflow" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Robot\Informations étendues.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <InArgument x:TypeArguments="x:String" x:Key="Skype">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Matricule&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Numéro">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Numéro&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Adresse">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Adresse&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Zone">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Zone&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Groupe">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Groupe&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Commision">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Commision&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Date">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Date&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Photo">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Photo&quot;).ToString" />
+                        </InArgument>
+                      </ui:InvokeWorkflowFile.Arguments>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:InvokeWorkflowFile>
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Robot\Paramètres utilisateur.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <InArgument x:TypeArguments="x:String" x:Key="Propriétaire">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Propriétaire&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Pointage_permanent">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Pointage permanent&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Super_admin">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Super admin&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Admin_restreint">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Admin restreint&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Accès_étendu">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Accès étendu&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Managé_par">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Manager_par&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Manager_de">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Manager_de&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Groupe">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Groupe_1&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Nom_Prod">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Nom_Prod&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Pre_Prod">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Pre_Prod&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="QA_Prod">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;QA_Prod&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="No_Prod">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;No_Prod&quot;).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="samedi">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Samedi&quot;).ToString" />
+                        </InArgument>
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </ui:OpenBrowser.Body>
+    </ui:OpenBrowser>
+  </Sequence>
+</Activity>

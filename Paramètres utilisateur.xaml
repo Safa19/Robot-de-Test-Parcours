@@ -1,0 +1,514 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Paramètres_utilisateur" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Propriétaire" Type="InArgument(x:String)" />
+    <x:Property Name="Pointage_permanent" Type="InArgument(x:String)" />
+    <x:Property Name="Super_admin" Type="InArgument(x:String)" />
+    <x:Property Name="Admin_restreint" Type="InArgument(x:String)" />
+    <x:Property Name="Accès_étendu" Type="InArgument(x:String)" />
+    <x:Property Name="Managé_par" Type="InArgument(x:String)" />
+    <x:Property Name="Manager_de" Type="InArgument(x:String)" />
+    <x:Property Name="Groupe" Type="InArgument(x:String)" />
+    <x:Property Name="Nom_Prod" Type="InArgument(x:String)" />
+    <x:Property Name="Pre_Prod" Type="InArgument(x:String)" />
+    <x:Property Name="QA_Prod" Type="InArgument(x:String)" />
+    <x:Property Name="No_Prod" Type="InArgument(x:String)" />
+    <x:Property Name="samedi" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>751,6588</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Paramètres_utilisateur_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="68">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>System.Security</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Paramètres_utilisateur" sap:VirtualizedContainerService.HintSize="680,6523" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_data" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Geoprod" sap:VirtualizedContainerService.HintSize="638,6431" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="2884740f-d4b7-462e-8d9f-2bb03826191e" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="604,6215" sap2010:WorkflowViewState.IdRef="Sequence_31">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Int32" Name="No_Prod_1" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If Condition="[Propriétaire=&quot;ON&quot;]" sap:VirtualizedContainerService.HintSize="562,438" sap2010:WorkflowViewState.IdRef="If_18">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,250" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="css" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Propriétaire'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_19" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2884740f-d4b7-462e-8d9f-2bb03826191e" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://beta.geoprod.com/gestion-utilisateurs/fiche/nouveau" DesignTimeRectangle="627, 157, 50, 23" FriendlyName="'LABEL'" FullSelectorArgument="&lt;webctrl idx='2' parentid='mat-tab-content-0-3' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='mat-tab-content-0-3' tag='LABEL' class='switch space-switch' aaname='' /&gt;" Guid="96fed767-1c9c-4356-a57d-c45ead53a10d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAAbCAYAAAA3d3w1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHLSURBVFhH7ZTLasJAFIYHfAJ9IHXpwvfwHdwJoitXguArCD5FQagrS1oVurFeWon0YjUpWOLp/MEJ0/SWzEwXkQx8EOKcc74/TsLoTFcaLGmLWZZF5wgbjUYkM6xU6CKT8bksFumq3abxYEDT6dQH17iH38Q+E2Bu2EUHJoSBVa/TEEM4k0aDZrPZr2CP2G8CzJd9dGCLxYLAfDymm2yWrvmAeatFm80mEtiLGhNgPjyEkw7Mtm0Cy1qNbnnzealEu90uFqhBrQngIZx0YNvtlsAqn6c73vi116PD4RAL1KDWBPAQTjqw/X5PYJXL0ZI3fl+vyfO8WKAGtSaAh3DSgTmOQ2CFppzj8aiEqDeBcNKBua5L4IE/qXve1OPnM+5CDWpNAA/hpEMQzC4U/MZv/f5JN/pCTVhQFXjIgqoEwZ6bTb/xY7l80o2+UBMWVAUesqAqQTCHfwDEcXS63ZPy3wt7w3KqYD48ZEFVgmDgpdMJhkQJZzIUwHzZR4dPwcBTtRoMwhHD+yN/UHCNeyaPH8DcsIsOX4IBPDlxLP8bzDH5Twm+DQZw1vEi4ytlOiT6oS/6m3qnwvwYLOmkwZJGGixppMGSxpkGc+kDs1pexTVx0qoAAAAASUVORK5CYII=" InformativeScreenshot="e22ec2d4d4751f713fbbac26c9c1681d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Geoprod' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="405, 157, 73, 20" ElementType="Text" FriendlyName="'Propriétaire'" FullSelectorArgument="&lt;webctrl parentid='mat-tab-content-0-3' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='mat-tab-content-0-3' tag='LABEL' type='' class='' aaname='Propriétaire' check:innerText='Propriétaire' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE0AAAAYCAYAAAC/SnD0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAP3SURBVFhH7ZXva1NXGMfvXzJXwe3mTRtf3HcpRRYEZWBVtANpJvSOsWUKFYaYQJtq4wstKA0bE3QNDQlbujdTaTvsmnQmacB1KcYftVab3iC0QVOqbd5+d8659+TmpLG2cXWb3AMfOM+vc57zvfeeK8EaWx6WaHUMS7Q6hpTNZmGxNaTp6WlYbA1pZmYG/x/iuLDPgc6f79aIvTukfD4PxrAXH+z8SGS3E+291zGdM3LeEcNesrd3dJ1/jvTY0vkL5qr8m2cUp8m5Tg/Xim0eqVAogDHmw45jP+IhtymLM4h+uwd7+pKm719jHqGvTiD6WPT/3v0xvGOib7uRVlZWwJg4hw9dITzlNufOZThq+f8j/HFWRtdE7dh2Ia2uroJx24+Gz8PIcZuTugjZ8OfCHWjouYHEd1/jE8UG320SX1lEYqATrcRu2GWH0tGP8RyvT8G3qwOD4zdw5pBC4jY0HupC9AGPryLRa0P7QAxRz1EoTST3ieELL5RzcuP9aHfYq9ana9M9TVg/hSyivXp/LP+IH6PV/ZA9Xrc3rR8kdiNdUzmKM+EsXhh9cKS1tTUwEkS042EscJtSvIdB1Y6DA7PMXgiraGhqhW94FsWXes6jgTbIahiPDHtxzA/n3n78yexJ0qQdje6KeIzEW/xIFnU7SRqXFTeu3tHKa1KfK6yxeXHyIlnPj/FFo/6vH+Cq6JPm+hL6nPFsEtExs7+Fn9yQu+IosjjtR8XgUz22fm8NUVWBK6Sfd+2lhl+9bWT9om4bSKVSCYzkeeGpUWRHG74JprH0Ss/RIkS0kzexxGtKGVxqacW1+9ym5BE6bkdPks7T6CGi6XNOAUNuGzy3lpmd8tvQHMhUxHWfK5JnuddPmrk6eQypKkLzZq64fhXzESJyBBqzaT9irbB3JoDmA0FkuU1J90H2p02bIIpWXrw2TDRhAbEJjnnoN8XF+fo4fQDig+RwoWiuINrz+xjyu7H/Uwdknr+BaMLeNV4csV7nLUWr702rfHs2Fk3P7YlX1osw0SriqT47ms/egrZs+OYi+GyzotE37VgEs9x+DW8pWgmzQXqnkY2MT3gpfp7cQQFMMVsXrdFdFW/qRsw41MailbBM+nKqQUwtGfFXBUyNpMt9TgWcRKSJ8hUi2CQ31tcKebOisQe+H54R07c8N4HfMpXXwz8gGm0sFTyFg/xvpQYQ03jcaDJ+E57Dxt/zcDdCd80m3iQaRYsH8MVevZ7es55IpixS6XkG36v6p8hqyOcZIpc3/fvJjlO4NnJlwzutem9erzTR8yhwfknOU3W9mKJtC2KT7wuWaHVgiVYH2yza+4klWh1YotWBJVodWKJtmRL+Bm5t7YYwsJFLAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_44">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[Pointage_permanent=&quot;ON&quot;]" sap:VirtualizedContainerService.HintSize="562,438" sap2010:WorkflowViewState.IdRef="If_19">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,250" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="css" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Pointage permanent'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_20" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2884740f-d4b7-462e-8d9f-2bb03826191e" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://beta.geoprod.com/gestion-utilisateurs/fiche/nouveau" DesignTimeRectangle="881, 185, 35, 17" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl idx='2' parentid='mat-tab-content-0-3' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='mat-tab-content-0-3' tag='SPAN' class='slider round' aaname='' /&gt;" Guid="67b0019c-fdd2-4c24-9500-f0a4ad6a0024" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACcAAAAVCAYAAADFEfeTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEBSURBVEhL1ZXtCYMwEIYLbuBCLuBELuAGgkN0rVaEfvwx/VWuPIWTNIm01hSuBy+iifc+5i5m55wTq/pPuGkY5NK2MlaVHMtSDkWRTeQjL/nxSfmjJNy167IDLQkf/FIcEdy5aeYXT3Utt/1e7uMoBFfuee4b5BC+IcsLHF+gk6e+fwItBeN+8hwKV3CGo/ZayndgGrkB8fd7cIajOZlAydZE7hLDEcGxexikp9YE80ODLYIjgtOSavN/GswPDbYIjghOB78JP3kORXCmV850z5nerab/c8jsCaEye7aq+AIt8a+FT7hiqiQcovY0J7snNyj5yEt+v8dCLcJZkGE4Jw92LGXyfcSZvQAAAABJRU5ErkJggg==" InformativeScreenshot="24de7499d50721277fe3f0ae02091f71.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Geoprod' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="731, 157, 127, 20" ElementType="Text" FriendlyName="'Pointage permanent'" FullSelectorArgument="&lt;webctrl aaname='Pointage permanent' parentid='mat-tab-content-0-3' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Pointage permanent' parentid='mat-tab-content-0-3' tag='LABEL' type='' class='' check:innerText='Pointage permanent' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_46">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[Super_admin=&quot;ON&quot;]" sap:VirtualizedContainerService.HintSize="562,438" sap2010:WorkflowViewState.IdRef="If_20">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,250" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="css" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Super admin'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_21" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2884740f-d4b7-462e-8d9f-2bb03826191e" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://beta.geoprod.com/gestion-utilisateurs/fiche/nouveau" DesignTimeRectangle="1207, 185, 35, 17" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl idx='3' parentid='mat-tab-content-0-3' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='mat-tab-content-0-3' tag='SPAN' class='slider round' aaname='' /&gt;" Guid="29d98a11-7562-4589-934a-abc0fae5bc31" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACcAAAAVCAYAAADFEfeTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEBSURBVEhL1ZVbCoMwEEUL7sANuQFX5AbcgeAi3FYrQh8/2q8y5UBH0iSCjxSmAxfEJHOPmYk5TdMkVvWfcGPfy72uZSgKueS5nLMsmchHXvLjE/NHUbhH0yQHWhI++MU4ArhbVc0Lr2Upz66T1zCIBs+8Y8w1OSp8fZYvOL5AJ49t+8FZDua4Bkfl7+AMR+21lGvANFIC4u/24AxHczKBcm2NlCWGI4Dj9DBIP20N1vgmewVHAKcldZt/bbDGN9krOAI4HdwbrsFRBXCmd850z5k+rab/c8jsDaEye7eq+AIt8a+Fj79jqigcovY0J6cnNSj5yEt+t8d8LcJZkGG4Sd7q3IDPlz7AVAAAAABJRU5ErkJggg==" InformativeScreenshot="3f40975386efb793da5e015b5e4c6b57.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Geoprod' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="1057, 157, 79, 20" ElementType="Text" FriendlyName="'Super admin'" FullSelectorArgument="&lt;webctrl aaname='Super admin' parentid='mat-tab-content-0-3' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Super admin' parentid='mat-tab-content-0-3' tag='LABEL' type='' class='' check:innerText='Super admin' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAYCAYAAACGLcGvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQsSURBVGhD7ZXdS1tnHMfPXyKkYBfZaNxF2I1FBi4X2YV2hTq2JZPllDFcN8h2MwP1hUYv6vRCFAXTSrMT2s4yy6DzZTPRmSirNnZBGpPWNMnFkoAJzpjbb5/nPOfknOhhGfTQIj0HPnCe5/t7eZ7vec45HIxLt8swU8fLMFPHi4vFYjDQB257exsG+sDF43EY6AOXzWah8BSrNz1wvP8uGs6cRcPb7+HDr37E3fWnqpjTxQPPWXROPdbU6kFzGzzzmpoWXKFQgMze7St45/NJ/JlUza3ewLftP2BuT5k7TfzR+xY+uRHX1PSGOzg4ACOF21+YcfV3eayiqDF3SlgdMOMzf0pT0xuuXC6DsY/5niY4bu5KYw2eCXA0erGmmnsuuGC6FqnR5/+ahKOlGabGZlhdk1j7R4kvPw9ixNUCc2MTzC0ujCynq9raNdo/iLs9l2C1uHDrmSpPZB+PZ73gP7CS2jT/EvoWlfzyQRrLIy6S2wSTpQWO8S3M05oCixHrTy5i+grrf+6jq7ifyOHhuJzTju9+UfYvxku5bJ+LqlhWf1+KpXBHR0eokvwV39tIk4tuDAmL2HxSVDTKngAnMSusmksLPGmyrtKbYb8eQu5fpu/6eZi7BKSpXlzHkM2OvmCexeceYbyLx609FhsmizdbuzH9MIOilF9LHuHZEHaL0jg9i8uWXixL47+nO2HmBexKubngddjJxp1CRhyL9W1eLOeYTtdmstjR84DpR0m6fjfuSzqNl3PFfVo6MFRdewh9rW0YecRiKVylUkENhyUkNu/BN+DGxzZyAqyd6JlLMi0VIM0GEVHFZwKkiXdDpfPwpxS9chjFaGsHfDsV5OfcMHmWUJI1QuYOD2cgK95HvE04PxZVcuuShZ88DNZP6VOrE0NU9e2+HUWPjuF86xi2qvE78LUr66fxcq64z2NrDw4Q/Q7TKSfNPE6cGGTphC9O7v+XmbW6vKH+sBRLXq8TSPnqxWtTQuzeIC63d7BXTcyXN7+B/uMPkqCueaI+XW9XABl5XPNwNMyU9ylxvF59MytJ+D9lZmiZFfN1/PfJVJ0Y8WQOrKi0WuqauTEMc+sgFjIlaY6uTe5H+7RhNKqK1ziZr8jMLH7+phsT4SRKh0pC5rdetNmGESnRMVtwf0jajHhqlZPFzCTfzOEV5KUaiZ/IN/PiDBJUL5HTY+PhixZYPCG/uYSIxuI1EV/LQQTzbJwPDZNvorL5xAz9ZgaQkHoz/bWYSUhtwO/thl38ExOTyB/rgnsKwYwSU9qcglPUrWhzz2Bh6uRrvlCNIX9zfqwmv5JZweiXdpyT63sC2JLMqWsmfc0DvbhgZblfzyxhQrX5ymEBkQm++rd1TkSxoKr5as18WSQza7+Zbw6GmTpimKkj+pr5hmOYqSOGmTpimKkjhpm6UcEL/60SMmL76fUAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_48">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="562,604" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="526,526" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If Condition="[is_Active=&quot;ON&quot;]" sap:VirtualizedContainerService.HintSize="484,434" sap2010:WorkflowViewState.IdRef="If_21">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,248" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:String" Name="css" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick AlterIfDisabled="False" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Active'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_22" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2884740f-d4b7-462e-8d9f-2bb03826191e" Version="V1">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://beta.geoprod.com/gestion-utilisateurs/fiche/nouveau" DesignTimeRectangle="555, 392, 35, 17" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl idx='4' parentid='mat-tab-content-0-3' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='mat-tab-content-0-3' tag='SPAN' class='slider round' aaname='' /&gt;" Guid="21ee767f-4e7a-4fdd-a8a8-a3dfad695058" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACcAAAAVCAYAAADFEfeTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEBSURBVEhL1ZXtCYMwEIYLbuBCLuBELuAGgkN0rVaEfvwx/VWuPIWTNIm01hSuBy+iifc+5i5m55wTq/pPuGkY5NK2MlaVHMtSDkWRTeQjL/nxSfmjJNy167IDLQkf/FIcEdy5aeYXT3Utt/1e7uMoBFfuee4b5BC+IcsLHF+gk6e+fwItBeN+8hwKV3CGo/ZayndgGrkB8fd7cIajOZlAydZE7hLDEcGxexikp9YE80ODLYIjgtOSavN/GswPDbYIjghOB78JP3kORXCmV850z5nerab/c8jsCaEye7aq+AIt8a+FT7hiqiQcovY0J7snNyj5yEt+v8dCLcJZkGE4Jw92LGXyfcSZvQAAAABJRU5ErkJggg==" InformativeScreenshot="a7723eb5328bf4d9d13aac8605a1aadb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Geoprod' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="405, 364, 39, 20" ElementType="Text" FriendlyName="'Active'" FullSelectorArgument="&lt;webctrl aaname='Active' parentid='mat-tab-content-0-3' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Active' parentid='mat-tab-content-0-3' tag='LABEL' type='' class='' check:innerText='Active' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACsAAAAYCAYAAABjswTDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJGSURBVFhH7ZS9a9tQFMX7r3gwJEvjxZtDFuHBBIrJ4M1kkCZDhiylGmI0xHQoaPDUwWAIaDGGEgIZjFFMSdBg48kQkiEgQ0Cm8IaA1tP3oW+pLqGoNEXDD/S49713dM+9753rungrFGLzohCbF/+B2OcxlLIEfZ4ReyV357sonVuZsdeSKfZh2ILy8ROksxlIRvzXWNDKPdxlxv6ctNiXJfR6FyZZ4+K4hcF9Ir6VvyzWGXfQHKz4N5l2IenLWJxjz6DLNeyUqcXVBhR9Bvt7DyW2DhCiWRu0jbVorT1WhOhZG4w6FahTwtf2TR/tWoXuraAq92Ha0dyU2EcMjjoYPXtrVuXDxAXEwud6A+o1FcBzNlgYV1i8sHi6soFYl8A8q0AZb4KY+2SgfdDne4n1BVK9B9MRMWf5Fe1jA7afS4mLnffRTFSSVTp6AZl0UeqM4URyQraJpWt6/n5EAJuN5vCRfm9webILdSIqLFhjJMu4ePLXMbHiz+NWehwN8eDl2Ya8Zbp/I5Y7580Bc+3Ad5HNR8a9FO02PCsUyyxJlN1noVPbvb5yvp2idHK1tbImbwlBXKxwap+6x+bhffDaiMpqN+G+LAKxC12K91MUZp9vPZlB3WtAm3q5sZ5l1ZLCGCUplu+vyrQw8Xec3PYgyUMsvJ7l515bGT37Y0IFnOLST0yxwuADtW/lre8n0JKvgVdNMqeDwSda9FtKLIUVJtpaPuw1UOpVbv9OrQXVWMKJuBQfsH+cQmxeFGLzohCbF29IrIufzJHUcZYICA8AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_50">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </ui:CommentOut.Body>
+            </ui:CommentOut>
+            <If Condition="[Admin_restreint=&quot;ON&quot;]" sap:VirtualizedContainerService.HintSize="562,438" sap2010:WorkflowViewState.IdRef="If_22">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,250" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="css" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Admin restreint'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_23" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2884740f-d4b7-462e-8d9f-2bb03826191e" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://beta.geoprod.com/gestion-utilisateurs/fiche/nouveau" DesignTimeRectangle="799, 292, 35, 17" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl idx='5' parentid='mat-tab-content-0-3' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='mat-tab-content-0-3' tag='SPAN' class='slider round' aaname='' /&gt;" Guid="74f8509d-766b-45e5-8dc9-32061415d27f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACcAAAAVCAYAAADFEfeTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEBSURBVEhL1ZVbCoMwEEUL7sANuQFX5AbcgeAi3FYrQh8/2q8y5UBH0iSCjxSmAxfEJHOPmYk5TdMkVvWfcGPfy72uZSgKueS5nLMsmchHXvLjE/NHUbhH0yQHWhI++MU4ArhbVc0Lr2Upz66T1zCIBs+8Y8w1OSp8fZYvOL5AJ49t+8FZDua4Bkfl7+AMR+21lGvANFIC4u/24AxHczKBcm2NlCWGI4Dj9DBIP20N1vgmewVHAKcldZt/bbDGN9krOAI4HdwbrsFRBXCmd850z5k+rab/c8jsDaEye7eq+AIt8a+Fj79jqigcovY0J6cnNSj5yEt+t8d8LcJZkGG4Sd7q3IDPlz7AVAAAAABJRU5ErkJggg==" InformativeScreenshot="79437fef3cc190d2a0885f84c5497aea.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Geoprod' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="649, 264, 97, 20" ElementType="Text" FriendlyName="'Admin restreint'" FullSelectorArgument="&lt;webctrl aaname='Admin restreint' parentid='mat-tab-content-0-3' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Admin restreint' parentid='mat-tab-content-0-3' tag='LABEL' type='' class='' check:innerText='Admin restreint' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGUAAAAYCAYAAADjwDPQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPtSURBVGhD7ZfBSxtBFMb7r3gQ4sXkklvES8gh9NAg1IMQPKz0EOlBCoUISgKGHgp7EAIehICyIBKQEiiySJJDQw+GHIogUShEEFaEPQi5fn1vZ3ezu7Op2kLdwh4+yM57M/Pm/WbeTF6Nx2PEipZiKBFUDCWCiqFEUDGUCCqGEkFNh3K+i4XZEo5vQ2whGmkKZna+h9oek9V3VcMoxPa/qbcz98d5cDQFion2Vh4fPpZQaFyF2GX9DZTI6KeG4r/cHFPmC4dy28TaUgND8zsquW20zRCfgGIof6DnQOmreZR10/o9bCxjrXkX8DHxQ9tGIU1HdTaNwmYL7UMPFJ5stoZjvSZ8khkU6wMY1y2Ul9LUZw7zxT3078V4PqB239PzPRQzKfJNIa1MfIOy+lZb6NVLyNJclW/cHoxPww+n//0FDjaXMU8xcFxs6xv2ONzmyEoWbcpZBftnTZTfZpBwEjjqQlXom/wSGQVq58aNh8tXURPfYl06+nUF6aSYj/NgOjZpPjGGDMXsopzbRf/B/r5tYX2FTo3Hx9S3kcjV0KbFWG2XGtbSlEBfYlMoHtql776LymIKCUquSA6Vx2oWC7sDyy5DSSH/uQuDY3i48/kGZfVNvkHl6xVMO+bRkYJ5RcPQ+W4RIBqfk8GbLE+JcfufaTj9aY8n7VyGksJ8qYH+SGzSMVWPT7k8Kh17oxoD1FcVHNhjSFAotk+uL+chC3UgfOX5hCQoRrMknYy+ugz13Pm+w5f3c+5JctTbCULZxqlb9kSf9ZPJuAzW8ZehePuSOjXMKE0peJbV930Lhts2gLr4BvsXXj9KZLKGHv1mKAtVXQB37bZCoXiSSDJONjCzqVuAnTbeBA4ICUrAt10l+5F9sp4G5Qr7S54j5VFiq2sPfoODVadMTCQnViTBsXOwvj7fKNFTofj7Wr4hwbN8fS1xIsPWYO/mhxu06xsoZNJIvy6h0ryYJC0UyuQUsKz5wsa3Y5DLlzc2v/1JUExafDYwiNAdjkvL2L8Uv4O7niWflJeCwieliINrv1+ozCscb6Qma+G5V6jsuT4yFOukVLvud1DPhuKbT8gDhRNPR9UtU35xWVtQRS02z55yp7wUFNGW3dIxckoUJb+tiwu2f0IXu/Pfy76v3HJi0P3JF7u1+VgyFL5TKjnyGUw2pXGuozftTvkdFGk+oQmUiwYKi3TBe4w+mTrKSar19itm2Hz89fVSUNzXl/V6o5dergT1zE5UZw/r/JLikmO9vlrug4A1PHHWxTGEQGHx6+tdXnrBse1ZUEj++USbdNHHennFUCKoGEoEFUOJoGIoEVQMJYKKoURQMZTIaYxfh824LOm/Ae4AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_53">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[Accès_étendu=&quot;ON&quot;]" sap:VirtualizedContainerService.HintSize="562,438" sap2010:WorkflowViewState.IdRef="If_23">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,250" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="css" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Accès étendu'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_24" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2884740f-d4b7-462e-8d9f-2bb03826191e" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://beta.geoprod.com/gestion-utilisateurs/fiche/nouveau" DesignTimeRectangle="1126, 292, 35, 17" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl idx='6' parentid='mat-tab-content-0-3' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='mat-tab-content-0-3' tag='SPAN' class='slider round' aaname='' /&gt;" Guid="a10bc5c2-9317-42e4-a2b7-5f9d327b07ce" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACcAAAAVCAYAAADFEfeTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEBSURBVEhL1ZXtCYMwEIYLbuBCLuBELuAGgkN0rVaEfvwx/VWuPIWTNIm01hSuBy+iifc+5i5m55wTq/pPuGkY5NK2MlaVHMtSDkWRTeQjL/nxSfmjJNy167IDLQkf/FIcEdy5aeYXT3Utt/1e7uMoBFfuee4b5BC+IcsLHF+gk6e+fwItBeN+8hwKV3CGo/ZayndgGrkB8fd7cIajOZlAydZE7hLDEcGxexikp9YE80ODLYIjgtOSavN/GswPDbYIjghOB78JP3kORXCmV850z5nerab/c8jsCaEye7aq+AIt8a+FT7hiqiQcovY0J7snNyj5yEt+v8dCLcJZkGE4Jw92LGXyfcSZvQAAAABJRU5ErkJggg==" InformativeScreenshot="356a0f64b53f4093e654cb42daaa9064.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Geoprod' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="976, 264, 85, 20" ElementType="Text" FriendlyName="'Accès étendu'" FullSelectorArgument="&lt;webctrl aaname='Accès étendu' parentid='mat-tab-content-0-3' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Accès étendu' parentid='mat-tab-content-0-3' tag='LABEL' type='' class='' check:innerText='Accès étendu' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFkAAAAYCAYAAACRD1FmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPCSURBVGhD7VfPSyJRHN9/xUOQl+wyt6SLeJCFkmA9BNJB2YPRIfayBoVB0mHBgyDsIRCMgRBBQogYRD0UHlY8hBAWBAaBEswh8PrZ75t5o9P4RtnKoYU5fMB53+/7vvf9vO8vvwyHQ7iYL1ySHYBLsgNwSXYALskOwDmSXx5R3FlGvDQQy98AtXqAxS0Z3Rex/LPAhuQBigkv/Jm2QPYOPJQQ3czj5kNIeURhK4KTjkg2P/TkGDxHTaHMDmKSb/MIJ37iR/AANVUgfwe6cgJJRRXK/gl/sghnLUHwICNKkd0zr30wPozkViaEZFXVDIbzdxPyT4v/huSnEuIbPKXVBpLBLFrW9O41kImtYHHBC48UQjzTQI/r9OpZRFeW4SHZUjCBTP2R71NxIx8gLNGeBQnhPRk3z9zecweFvQiWmD3fiiZr9bnMCrOuFEFS7kCldc15tmbAINtGn9nSCVPQysUg+UhOZ0dz7ZF88s4V1E7HJE8SzkqYF6kr41vHBMndfORVc2pl17WoHumoTRwHKdIvOHkvA7TkivYQavMXAlRiLh+4br+NQllP6d5ZDEuxcZPqVejydEHmEDszRM5pe5isKo9tvAI1z5iE6CnPLmqm50Rg6orfbyKSp+trJPnWcVzn/vYbSK0GkGnr+1WFGmswjZrx4Lcy4hIF0LtIfmkjs2GJXBbZiRL6/Jsd7DF9j6Hics9rMz2Q3dV1S5Oix/KlcU2/Gcn+QwV9a8ZY0c7Cv0ZZZl6jh100HLWSPENfI2lPMUXuELVDL6JnLIAGON/xTvSP66N3kqyNROaUG4G6+K2uM2nYgPgAHU2khHZjKLCIpQir5XYRXpEgfU0gVeq8cnyEq7TABsEg1kryDH2RL9dHRLLMSBb7Y97zBpKZAnfapKCBOnlgv6E53i/vwrNTEUSy/vLbZbtIjqJwb10XQL1DcXdZbIdF5iaVHOu6AUayWT5DfzrJYn+mR3IHJ2vTSCYi/cIyQGBlZDWB4hP9Zs3QF0Kqyg8312SWCayGMT0mM9dkulBgXxk1SEZmTdGbTKtMjc7YQ/ZqhwGesnxtBBYIpn5AUO8buGzzlO5XsE3ZYWTdLP3pJJv8sanJ2iOukpw38C41RVYJbEhm9dQmejhuTtYRPuno37cKUjbTRfciPX26MMuquqxX/43tb9yeNl1U7P/F8WlBmwao4we+Z1EzZV+3bEwDer2fpj+LZIZuyX66YD6NJhPiYTuvIDez8bmYC1ySHYBLsgNwSXYALskOwCXZAbgkOwCX5LljiL+AL5JWOxmPywAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_55">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Managé par'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="562,216" sap2010:WorkflowViewState.IdRef="NTypeInto_19" ScopeIdentifier="2884740f-d4b7-462e-8d9f-2bb03826191e" Text="[Managé_par]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://beta.geoprod.com/gestion-utilisateurs/fiche/nouveau" DesignTimeRectangle="323, 339, 460, 40" ElementType="InputBox" FriendlyName="'Managé par'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;app-root&amp;gt;app-admin-layout&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;app-add-utilisateur&amp;gt;form&amp;gt;div&amp;gt;mat-tab-group&amp;gt;div&amp;gt;mat-tab-body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;mat-form-field&amp;gt;div&amp;gt;div&amp;gt;div' parentid='mat-tab-content-0-3' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='mat-tab-content-0-3' tag='DIV' class='mat-form-field-infix ng-tns-c60-108' aaname='' /&gt;" Guid="e376aa47-ec87-4481-89b9-78854ba9246b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAdAAAAAsCAYAAADVeunWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASiSURBVHhe7d3vSxtJHMfx+9OXsITlWGSRpfggSCPkuAhCI0awZIUTTLlIAyrNA8tFjlCChCMPAsYQ9dvZzWzcH4ltBnuk9f2CLzjuujv1ycfvzGh/kyUeHx9lOp3K3d2d3N7eUhRFURSVqKUBmhSG6f39fRSok8kkCtXxeBzVoodSFEVR1K9e3xWgAAAgjQAFAMAAAQoAgAECFAAAAwQoAAAGCFAAAAwQoAAAGCBAAQAwQIACAGCAAAUAwAABCgCAAQIUAAADBCgAAAYIUAAADBCgAAAYIEABADBAgAIAYIAABQDAAAEKAICBXytAx00pFTyp9/QYAIAfJBGgfal7lvjHAz3Ou/jTFu+wr0frp3/oifuuq0cAAPw4uQC1nKp0HvSnkr7UxbOs9Q3QhwupbiyZOwAALywXoHbRFr+R7ULH0t5xxHWdte5AAQD4v+QCtNwIxC9W5SLZyYXdp1uT5oGXDtCbluxtuWIXVOequlN7qyZXI31Nae+ojvWgJcG2G123Cq6UjpMblCO5apTV+2Zfb9mulE+T4a2uH5bE1c93twNpqTlYO219PZS9p56aQ9bCOTW6MtXXQ4OzPdlybX3dlq39K/UWLerEy3Jyvjebd2ouAIDXIh+gH0U6u8lOc9Z9lj6Moz3GVIB+bkrwaajDZyoXf9ji7j/tQYZhZRV8qV/rO65rKnx8CYbRUBlIu9GS3lgPb47EL5SkqcfjDyWxnLK09P3T67q6ng6t/nsVqJt16U7C0VT6f6kwVdfjR2Zl5yTDlpQdW/27n77i6jSQzn/6+uRCKkVXatezYbyU7bw9kd4oGbsAgNdkYYDKqCklFVztMFNU6LleXV1Vd2QDNOtjORVuYVg5qUM9PalvWFI518OccA6e1L+EHw8leBMeapqnbaSzqzrD+Ts6Ui06UvtHDyMq8Apq7nqUFQVopmscNHyxSs1nQzf6voSiAE3+EAAAeI0WB6jSfeeqsOxKc9uR6uXsc7kA1Uu4TrwEG1YmQNOBm37HfAn3d2e+DGxZcYBm750J5/D0jraU4/emKn5GXn5OShj8+oeEULSEu5GcUzZAlwc0AOB1WBqgMlbh5KjweBNIvCuZDtCBHG2qMAr3B6PlU+Us34E+G6DnFbGKZWkO4t4v7FBX7UDdlX7vc1EHOjxOdKA3RyogPal9Hs33RVtvCVAAQNryAFVG/7alc6MHSjpAZwHn7esDOJOu1P10OH0zQD9VxVYBGu9xDs8q4oR/CEF3j9+1B6rm5GyfSD8O8XFPWqedFfdArWiPdzYOxA8DdL5vO3snAQoASHo2QLMWLeFWNvVpVVd1ku9X7ECTJ2gLtvj7J7I33wMNLTiFu7/kFK49u8cq+lL5uz/vHrOiOWVP4R4mTtkqAxXknn6eu9OUIzpQAEBGIkB/Dr0DV+zdjh6tLh/qAACsbr0D9DqQymFHhvHyrP6Vk/hQkwkCFADwEtY7QIcdCXZ8ceLlWTv/Rw9WRYACAF7CT7eECwDAOiBAAQAwQIACAGCAAAUAwAABCgCAAQIUAAAD8wC9vLykKIqiKOob9fAw+w+z6UABADBAgAIAsDKRrxUIP/RjjyA6AAAAAElFTkSuQmCC" InformativeScreenshot="3214dc88915dc9e886ee533fffe77817.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Geoprod' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="323, 412, 460, 57" ElementType="InputBox" FriendlyName="'Groupe'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;app-root&amp;gt;app-admin-layout&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;app-add-utilisateur&amp;gt;form&amp;gt;div&amp;gt;mat-tab-group&amp;gt;div&amp;gt;mat-tab-body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;mat-form-field&amp;gt;div&amp;gt;div&amp;gt;div' idx='5' parentid='mat-tab-content-0-3' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='mat-form-field-infix ng-tns-c60-105' parentid='mat-tab-content-0-3' tag='DIV' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAdAAAAAsCAYAAADVeunWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALwSURBVHhe7dy/axtnHMDh/umHEUYEDSJo8GBMJXAgJRkcKkELDlSQQF0iqE01BOJFBA0dNGgwxohv705n+3R2Y+UdlJQ+D7yY+6Gztg/v+579QwAAX01AASCBgAJAAgEFgAQCCgAJBBQAEggoACQQUABIIKAAkEBAASCBgAJAAgEFgAQCCgAJBBQAEggoACQQUABIIKAAkEBAASCBgAJAAgEFgAQCCgAJBBQAEjwM6GIap4NetPayyLJ87LWiNziN6aK6DgA0ArqcRL/djoPRNBbX1bnrRUxHB9E5eh/L6hQA/N/VAnoVk0Er2j9Nq+OGVfUTAKgH9DyO99px8qk6/JLPw+hm/Rj/+Tp6+1lkg8n6/OI8Tg46d0u/3Rdn8XctvJNBFt3RvDoq5DPerBvDz+uj+aibP2sc56+66yXk4hmvzmOxEe9lfBwdRqdaYu4cDeOjqTEAO3Yf0CqKZ9vMNMt7s2j/OI7Z8qY6eRknnTyQP19GeeZ6EWeD9saMdquA5hE//qPacL2+jOHzzc/Mf83veT6My3KJ+Sbmv+UxzQN+VV4FgN34YkDLoBWzyXL089xVynt7cVp/seivl9F6dpJntKa4by//XPXMrQLaHUb9jrioP3caL/ebs+Ri5lz7bgCwA1su4Rahawa0Ea0P/YfxawRyuyXcRgo3fldx/23Q6+P+GQCwC1u+RLRFQFNmoFfv4/CpGejGc4sZaCeGs/IAAL6ZWkBzj/0ZS+5mOc5D90RAm3ugq4d7oIu3vTKQsyKo1fX67PHf9kA7b+6zXNzTPhrH/Pb7Xc3i7N3UHigAO7UZ0EL1jxTarfsl0tazXhy+mcTdluejAc098RZurGZxelRdb3Wi/+6XR5ZwG2/hNp9x+xbu7ffb78Xx7/N1tAFgRx4G9Bt6dA8UAL5DAgoACQQUABJ8VwEFgP8KAQWABAIKAAkEFAASCCgAJBBQAEhwF9CLiwvDMAzDMJ4Yq9X63+OZgQJAAgEFgK8W8Q/LMSJea5E1KwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Manager de'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="562,216" sap2010:WorkflowViewState.IdRef="NTypeInto_20" ScopeIdentifier="2884740f-d4b7-462e-8d9f-2bb03826191e" Text="[Manager_de]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://beta.geoprod.com/gestion-utilisateurs/fiche/nouveau" DesignTimeRectangle="813, 339, 460, 40" ElementType="InputBox" FriendlyName="'Manager de'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;app-root&amp;gt;app-admin-layout&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;app-add-utilisateur&amp;gt;form&amp;gt;div&amp;gt;mat-tab-group&amp;gt;div&amp;gt;mat-tab-body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;mat-form-field&amp;gt;div&amp;gt;div&amp;gt;div' idx='3' parentid='mat-tab-content-0-3' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='mat-form-field-infix ng-tns-c60-109' parentid='mat-tab-content-0-3' tag='DIV' aaname='' /&gt;" Guid="bd1b8d97-76a8-4835-b094-65432fa81848" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAdAAAAAsCAYAAADVeunWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARLSURBVHhe7d3RSxtJAMfx/ulLWGQ5liNIKH0IQoQcp1Co4gotidBCUy7SQBUD53GRQ0oQH/IQcJWov5vdzMbdrBodOGov3w8MZdyYWZ++zM5CX11cXIjBYDAYDMZ0XF5eajKZ6Pb2Vo8hoAwGg8FYuhHHcTqSWF5dXaXBvL6+XhjNvFf2XwAA8AwEFAAABwQUAAAHBBQAAAcEFAAABwQUAAAHBBQAAAcEFAAABwQUAAAHBBQAAAcEFAAABwQUAAAHBBQAAAcEFAAABwQUAAAHBBQAAAcEFAAABwQUAAAHBBQAAAcEFAAAB7mADhVVPdX2zu287OB3X9XdoZ39z32PVPUa6tkpAAB5pYB6wYb6N/ZHeWlQPAIKAIBRCqi/4qvWmt+FxuqtBwrDgIACAGCUAtpotVVb2dBBfheaxCTcUmenWgzoWVdv34TyK2bnanan/pstHY/tNaO3bnasO12118L0ulcJVd87tVcTYx23Gma96e97fqjG53y8zfXdukL7/eFaW11zD956Pmvzn4nK97A9vQe/UlX03V6YM/4zUj209xHW1d6fD+jj6wAAlks5oF+l/mZ+pzndfda/xBruzgX0r47aRyNN0slEB7/5CrcH6SyRxMur1BSd2E+cbJko1dQepVPjXL1WV6exnZ69V61SV8fO4y91eUFDXfv5yUlkrpvvzAV0+MEEdTXS4CqZTTT8aCJnrmdfmd3D1tG54vseTSfGHdUrgRr7dqGrgaJaEsq7gC5aBwCwXO4NaBoUE65eUgcTvbAamavmE/MBnfe1UYhbEq/g3V1QpVNFv3pqfrPTkuQesl3iSO3XyUtNs9qm+pt+bo2+NlYCbf1tp6kDNSt34Uvuwd/s29n9Rns1efVOMYbJ3zIL6OJ1AADL5f6AGoN3oYnlQJ21QBuH05+VAmof4QbZI9hkzAW0GNziGulj0eQR7i/B7DGw52UBnf/sVHIPd2v01MjWLYy7R7XleygrfqdVOANdvA4AYLk8GFDFJhqBicTrtrJTyWJAz/V+NTlfPNY4faxp7Jd3oI8G9FtT3kpDnfNs75fsUJ+7Aw0V5Y9V5zwloOkO1PydhZVKO9DH1wEALJeHA2qM/+mpf2YnRjGg08BVtwfTM9Ds3PA5AT3akG8Cmp1xjvabCnIv+jzpDNTcU7D2ScMs4vGpup/7hTPQRQFV/IQz0AXrAACWy6MBnVcMqHHWVXPV7AiTx5mh2Ul+eOYONP9ma8VXbfuT3s7OQBP3vIW7/cBbuP70M95KTc0/hvbFpicG1JictJ/2Fu4D6wAAlksuoD+H051w4UtBAAD81152QM2usLnb1yh7bDrqqhH4s5eaAAD4UV52QEd9tddrCrLHpn6oesueuQIA8AP9dI9wAQB4CQgoAAAOCCgAAA4IKAAADggoAAAOCCgAAA5mAT08PGQwGAwGg7Fg3NxM/29MdqAAADggoAAAPJv0L93eRKRksGVFAAAAAElFTkSuQmCC" InformativeScreenshot="418d50cc8a70bc70dee305fa1f586a73.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Geoprod' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="813, 430, 460, 16" ElementType="InputBox" FriendlyName="'INPUT mat-input-27'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='mat-input-element mat-form-field-autofill-control ng-tns-c60-39 ng-untouched ng-pristine ng-valid cdk-text-field-autofill-monitored' aaname='Nom producteur' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAdAAAAAUCAYAAAA9U2wWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQcSURBVHhe7drNa9tIGAbw/dOFEcEEHUQwxQcTVgEXUmpYlyjQBRfWIVnWS3NQqWEDcQ+mmNKDDz6YEsyz7zsaWaOPjT82NCY8PwhkrNFoRgc9Gs38AiIiItoZA5SIiGgPDFAiIqI9MECJiIj24AToDHHoIbyc2rLrFpEXIv5qiy/OSx8fERE9tUqAeg0JkkqGMkB3MbsM5UVkZktERPQSVQK0fRah2ewiWdqfDQboLhigREQvXyVAo49LJK+baJ7dYmGP1AXMw5chohMfnqez1gCdy7tK/d5VHy1fjkud4HSA6TxBLzvnuI1B3dfizNcYoRdh+KmH0Lbhn/SQzO1xcXvmIXw3wuA0gK8zZ9O/B0yuovU5XtBB/E/eM+PbCN2sH77085OMxRmfBqAn489l98YW1eIOsVzXtNHwZXwx7hZ2Fq+/2b88SBe4u+wgaKS/p/XtIWHGUgjd4j03ffp1iORtS8Za6gsREf10NQEq/66miE88dK6zJ3wpQJc36DSaiP62abacmPqtD9/TsqnvSQiPMF9JUdvTYGl2MPyW1pheSCC8GsDJwyIToNLGa9uGBqOeE8bS05SGjtdoof/5O5amjnTlz45cJ8Io69q9tCN1BlnXVhP0Awmri4m0qOU5RvLC4O0UoDO8l/GGv43XfZtdxbix16ibgc5+lzZPYkx+aEnq/yFhKtfIJvpbBaje86spFqYNIiJ6TvUBqqYaPPIAN7PE4sN8/qEFr3OzfvgbHyMn3LR+E/17UzDGb3z4b8a2JO77aDphWGEC1AlttUpwfpS3q6FTaFPiePBKg7/Qs2I4fT6Hf9zHJC2lStfaGKDa96NzJDa0y6oBOi70O5Wg24jkTqW2CtDHXjiIiOin+u8AFQsJRQ256armYV4IGGE/uaa/FuurSqho/Y0BmgdMqtjHauhUx6AK/S0EfWbT+Ert1raRq4zVtJ9/1s3/8mtuFaDle05ERM/m0QDVdbvbM10PjdB2HubbzUCfIkCLbZRnctXQ2XIGKrNHd95avlY1rCboHzv3pq4Nh54fXLgLvNrvoGZ3c64yFv1MzgAlIjpYGwJU2PVQd7ZUWQP9UbcG+hQBWrMGGuSfX6sBWl0Dffgi7bhroBqGG9ZA04CUNswSsL2u9CW/N3kb6dprcQ3UvGCE0k9nrVLH3zwdYpb9tpxidD1ev4Sk5+hsXwraJ3lxeXxdloiIntPmAFXZeqgTiNvswv3/AVrehdvFyG5CUnUBagJv0y5cdzdwzS5cnXknb0Oz21V32LbfDdEr3xtpo98u78K1x+SlQ3cGm2Pr0LO7cLN+HbXQ/WuWhrhyz/EDRNfv+QmXiOiAOQF6YGyAMjKIiOgQMUCJiIj2wAAlIiLaw+EGKBER0QFjgBIREe2BAUpERLQz4F+EqNd8QvYwLAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Groupe'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="562,216" sap2010:WorkflowViewState.IdRef="NTypeInto_21" ScopeIdentifier="2884740f-d4b7-462e-8d9f-2bb03826191e" Text="[Groupe]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://beta.geoprod.com/gestion-utilisateurs/fiche/nouveau" DesignTimeRectangle="323, 439, 460, 40" ElementType="InputBox" FriendlyName="'Groupe'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;app-root&amp;gt;app-admin-layout&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;app-add-utilisateur&amp;gt;form&amp;gt;div&amp;gt;mat-tab-group&amp;gt;div&amp;gt;mat-tab-body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;mat-form-field&amp;gt;div&amp;gt;div&amp;gt;div' idx='5' parentid='mat-tab-content-0-3' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='mat-form-field-infix ng-tns-c60-105' parentid='mat-tab-content-0-3' tag='DIV' aaname='' /&gt;" Guid="4cd82a24-faed-4d31-9ee4-f1f24b4f9a6c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAdAAAAAsCAYAAADVeunWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALwSURBVHhe7dy/axtnHMDh/umHEUYEDSJo8GBMJXAgJRkcKkELDlSQQF0iqE01BOJFBA0dNGgwxohv705n+3R2Y+UdlJQ+D7yY+6Gztg/v+579QwAAX01AASCBgAJAAgEFgAQCCgAJBBQAEggoACQQUABIIKAAkEBAASCBgAJAAgEFgAQCCgAJBBQAEggoACQQUABIIKAAkEBAASCBgAJAAgEFgAQCCgAJBBQAEjwM6GIap4NetPayyLJ87LWiNziN6aK6DgA0ArqcRL/djoPRNBbX1bnrRUxHB9E5eh/L6hQA/N/VAnoVk0Er2j9Nq+OGVfUTAKgH9DyO99px8qk6/JLPw+hm/Rj/+Tp6+1lkg8n6/OI8Tg46d0u/3Rdn8XctvJNBFt3RvDoq5DPerBvDz+uj+aibP2sc56+66yXk4hmvzmOxEe9lfBwdRqdaYu4cDeOjqTEAO3Yf0CqKZ9vMNMt7s2j/OI7Z8qY6eRknnTyQP19GeeZ6EWeD9saMdquA5hE//qPacL2+jOHzzc/Mf83veT6My3KJ+Sbmv+UxzQN+VV4FgN34YkDLoBWzyXL089xVynt7cVp/seivl9F6dpJntKa4by//XPXMrQLaHUb9jrioP3caL/ebs+Ri5lz7bgCwA1su4Rahawa0Ea0P/YfxawRyuyXcRgo3fldx/23Q6+P+GQCwC1u+RLRFQFNmoFfv4/CpGejGc4sZaCeGs/IAAL6ZWkBzj/0ZS+5mOc5D90RAm3ugq4d7oIu3vTKQsyKo1fX67PHf9kA7b+6zXNzTPhrH/Pb7Xc3i7N3UHigAO7UZ0EL1jxTarfsl0tazXhy+mcTdluejAc098RZurGZxelRdb3Wi/+6XR5ZwG2/hNp9x+xbu7ffb78Xx7/N1tAFgRx4G9Bt6dA8UAL5DAgoACQQUABJ8VwEFgP8KAQWABAIKAAkEFAASCCgAJBBQAEhwF9CLiwvDMAzDMJ4Yq9X63+OZgQJAAgEFgK8W8Q/LMSJea5E1KwAAAABJRU5ErkJggg==" InformativeScreenshot="4f35ad9b5582a78ad2d26dec7406d47b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Geoprod' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="323, 513, 460, 57" ElementType="InputBox" FriendlyName="'Prénom producteur'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;app-root&amp;gt;app-admin-layout&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;app-add-utilisateur&amp;gt;form&amp;gt;div&amp;gt;mat-tab-group&amp;gt;div&amp;gt;mat-tab-body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;mat-form-field&amp;gt;div&amp;gt;div&amp;gt;div' idx='9' parentid='mat-tab-content-0-3' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='mat-form-field-infix ng-tns-c60-40' parentid='mat-tab-content-0-3' tag='DIV' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAdAAAAAsCAYAAADVeunWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUASURBVHhe7dzNa9tIHMbx/dOFMUEUU0QwIQdT4oALWWKISx1oWefg0MA6NFCHuGygzsGUUHzQwQcTgvntzGhkvViJ7IkXlvT7gTnoZUYzCujxSNP+IQAAYGMEKAAADghQAAAcEKAAADggQAEAcECAAgDggAAFAMABAQoAgAMCFAAABwQoAAAOCFAAABwQoAAAOCBAAQBwQIACAOCAAAUAwAEBCgCAAwIUAAAHBCgAAA4IUAAAHBCgAAA4IEABAHDwnwTo+ENNqgcDmdltAABem1SA3ks38MTzsqVaa0j3nw2icH4lTb8hF791eqp74AXS/Wk3AQCvzkqANr/aTSv83pagUpfe1O4oMf2rLvWzNU9+tbYcoD+7EgRd9RcCAPxflAaoilDp7RXtx9MIUAB47dYI0Kl82k32358G4h30ZXhcl2oldf6vgbR2q9Gr32ogrctkFmrqHOo6ganjVaoSHA+z30jDoXT2a1F9ffz9QKYLe0y5OvRUnb509uw1ag3pTcJUm77sn03s2QV0CHlN6V+rGXVVna9fT++2ZRja48pTY3u860szHlulJo3T22zfc2NvX6vz0wFqr31lN7XonqT2zG6l+y4Zf+1dV27VRcx5el9cUkE6vWylxtKSwS97QFlpP//3je/Ht7bUd1QbmXMBAGVKAvRRwr+b4lcacjGP9pgHswqr5vlEZg/RPpkPpeWrfZc2jcKRtIMkQOI6reXxgTR3qnJ0E22KjKVTUwH5cayuqDyEMjj0xf9zZI5qOkA9vykD28TkY9Rm49wG9UQHQl16qUDMMIHhia+COTTB/Chj3UYqkIrHdiENvS/u+3wsXfWDYvmaepHr+0L1/b2vQm2TAL03P1KCk9Gyb/fnXbmIf4Po+rkZ6PxbS/zU/TCv2vNjKQ1QdT/UD4bJzPQcALCB8kVEdTVLuUsesObBvNeTdE6FZ3XxGhdiM9aYfg4kOI0e56ZO7vjgQAXGZ5sQN0dSfdNRMZqiH/AVFTp2FqoD1D9JnaHr7BxJErEqyN4889rUBEbu+GIoRzu+dH5Em+uOTb42k+B9qu+bBOiPjvhqLMPUjDtD188EaPRavfElc8dVCOd+tJQG6DM/OAAAz1rjFW7W6oPZ7ssFryn2vKI65pWsDdhMIC1lvyNmztdWQkX3vyxAsyGWH/OTY8vty7S1Rt+Lrp1pt7CNlMKxFtxvVZ4eS1GA5u8HAGBdWwlQM0s7GNitVUV1MoG45gz05QGaPz5anYEWja1sBpqZCSv5axWE1fjET65V1Eaarv+2K8kXXruw69JuFlgdi56hE6AAsC1bCdDo334G0vkevw98lPCmL1c2QEoDVD/c898RC76BvjxAC76B1pLgLh5b7hvoQ+4baFHf899ATVBXVRvR0qPHO9UXvfBpea2kjXnRN9CwJ3XVXif1Kn2uQtzf7cgovuUPoYzOr5L7YUK5KQNzSTvW1AyVAAWAl9lOgGp6JWo9XqkarSKNH+7lAaqsswr3xQGaX4VbtnI1UroKV/W9/dwqXGWWvu5+R/rHuWvlxh+vwo1NzhpS06GbCj29CtesoDXX1f2KFyFps8yq5/0PfWnzChcAtiYVoK8cgQEA2CICFAAABwQoAAAOfp8ABQBgiwhQAAAcEKAAADggQAEAcECAAgDgYBmg19fXFAqFQqFQSspiEf2PNcxAAQBwQIACAOCAAAUAYGMi/wLETfzuuUxQAAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Nom producteur'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="562,216" sap2010:WorkflowViewState.IdRef="NTypeInto_22" ScopeIdentifier="2884740f-d4b7-462e-8d9f-2bb03826191e" Text="[Nom_Prod]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://beta.geoprod.com/gestion-utilisateurs/fiche/nouveau" DesignTimeRectangle="813, 439, 460, 40" ElementType="InputBox" FriendlyName="'Nom producteur'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;app-root&amp;gt;app-admin-layout&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;app-add-utilisateur&amp;gt;form&amp;gt;div&amp;gt;mat-tab-group&amp;gt;div&amp;gt;mat-tab-body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;mat-form-field&amp;gt;div&amp;gt;div&amp;gt;div' idx='7' parentid='mat-tab-content-0-3' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='mat-form-field-infix ng-tns-c60-39' parentid='mat-tab-content-0-3' tag='DIV' aaname='' /&gt;" Guid="a3e966f3-2f0d-43a4-ae77-fd5a4b75fff0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAdAAAAAsCAYAAADVeunWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASsSURBVHhe7d3Pa9tIGMbx/dOFMcEEH0QwxQcTVgEXUhpYlzjQBRfWISnrpTk4NLCBuAdTTOnBBx9MCebdd0Yj62djZzY0Jnw/IMhY0mhGBz0azUB+EwAA8GgEKAAAHghQAAA8EKAAAHggQAEA8ECAAgDggQAFAMADAQoAgAcCFAAADwQoAAAeCFAAADwQoAAAeCBAAQDwQIACAOCBAAUAwAMBCgCABwIUAAAPBCgAAB4IUAAAPBCgAAB4IEABAPBAgAIA4CEToDPph4GEZ1NXzrqSKAil/9UVX5yX3j8AwFMrBWhQ0yApZSgB+hizs1BfRGauBAB4iUoB2j6KpNHoynjpfrYI0McgQAHg5SsFaPRpKePXDWkcXcnC7akKmPsvQ4kO6hIEZtTalM7Zben4k/OetOq6X49pHg5kOh/LSXLOflsGVV+LE1/7EgaRDK9PJHR11A9OZDx3+9XVUSDhu5EMDptSNyNn2757mZxH63OCZkf6/6Yts76NpJu0o67tvNa+ZPpnAjDQ/qeSe+OKxuJW+npdW0etrv3ry+3CjeLNb25Lg3Qht2cdadbi3+Pj3S5l+5IL3fw9t236fSjjty3ta6EtAIBfriJA9c/VVPoHgXQukid8IUCXl9KpNST6x6XZcmKPb334Hpft8YGG8EjmKy2a+kywNDoy/BYfMT3VQHg1kEwe5tkA1TpeuzpMMJpzwr62NGZCJ6i1pPf5uyztMdqUjx29TiSjpGl3Wo8eM0iatppIr6lhdTrRGk15LiN9YQgeFaAzea/9Df+4Wbdtdt6XS3eNqhHo7E+t86Avkx+mpMf/pWGq10gG+lsFqLnn51NZ2DoAAM+pOkCNqQkefYDbUWL+YT7/0JKgc7l++Fufoky4meMb0ruzBevmTV3qb25cSd31pJEJwxIboJnQNlZjOd5L6zWhk6tT43jwygR/rmX5cPp8LPX9nkziUqxwrY0Batq+dyxjF9pF5QC9ybU7NpZuLdI7FdsqQB964QAA/FI/D1C10FA0ITddVTzMcwGj3CfX+Nf88UYpVMzxGwM0DZhYvo3l0Cn3wci1Nxf0iU39K9RbWUeq1Fdbf/pZN93Sa24VoMV7DgB4Ng8GqJm3uzoy86GRtDMP8+1GoE8RoPk6iiO5cuhsOQLV0WN23Fq8VjmsJtLbz9ybqjoyzPnN0+wEr2l3s2J1c6rUF/OZnAAFgJ21IUCVmw/NjpZKc6A/quZAnyJAK+ZAm+nn13KAludA779oPdk5UBOGG+ZA44DUOuwUsLuutiW9N2kd8dxrfg7UvmCE2s7MXKXpf+NwKLPkt+VURhc365eQ+Bwz2teCaZO+uDw8LwsAeE6bA9RI5kMzgbjNKtz/H6DFVbhdGblFSEZVgNrA27QKN7sauGIVrhl5j9+GdrWrWWHbfjeUk+K90Tp67eIqXLdPXzrMymC7bx16bhVu0q69lnT/nsUhbmTPqTclunjPJ1wA2GGZAN0xLkCJDADALiJAAQDwQIACAOBhdwMUAIAdRoACAOCBAAUAwAMBCgCABwIUAAAPBCgAAB7WAXp9fc3GxsbGxsa2YVut4n/FxQgUAAAPBCgAAI8m8h9HdUZpvQt2bgAAAABJRU5ErkJggg==" InformativeScreenshot="6b7f764d734a94f9eec7da38d96c308e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Geoprod' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="813, 531, 460, 16" ElementType="InputBox" FriendlyName="'INPUT mat-input-29'" FullSelectorArgument="&lt;webctrl id='mat-input-29' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='mat-input-29' tag='INPUT' type='text' class='mat-input-element mat-form-field-autofill-control ng-tns-c60-41 ng-untouched ng-pristine ng-valid cdk-text-field-autofill-monitored' aaname='Qualité producteur' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAdAAAAAUCAYAAAA9U2wWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATMSURBVHhe7dvRa+JIHAfw+9NDCSUcYQkSjj4EqQXLdrnCWhqhpRbOUpemrLAe9aFw7oMscsjhgw9hKfK9mWSMMzFu1Na79u77AaFJmt9k8uA3Mxl/AhEREW2MAUpERLQFBigREdEW3m6Axh0Eex7CodomIiL6By0H6KSPsOrC3rNgWeKz7yJo9jGZqeMvZNT0YB111RbQPRJtadtl5Pnux4Ha+vfl+0NERP9tZoBOu6g5Dg6uBojngRkP0a46sPwWRmrXSygLHHnca65ocdbDybsT9F841J/jpQNUPlDUPqsNIiJ6dbQAjdGpWsWjutkADddC8ClWO57vWQH6CjFAiYj+X7QA7aG+5658p5gExGGkttIveDPgxOjV8hB+U5vTR7SO/Gwq2HZr6Pypjgn5wFnUGyH01PSx+izameKxGcBVNd1qiMepOlQgqXkeoVV101qif4EYXT+p4/gWwrNqaH85hb8vjs+vZzZB7+wga8eu1BFp1758HS1E53p/cvdC+lyD5YXGKH58X4dnpzWsfR/1+7HYK89V+9QnC1JxT+X0erJf9qX5KK5EUX3RI7zwHp+l98OW74/16yMioo0sAlR9AUerpkVzAVAaoOMuWnfDbCp4fOnDqnbEODe1OkBT8rhZX+y7FOdUQgy+y60njH4TISZqrBoXy5rWno/wq4rMSYSaY4tAUmckfbbgHLYxnGaxisGZCCmtncldDY6zmDKe3gawHHGvJun209cQvgzTDQI0/lIXNQO0R/Nr6yO87qd/C/LazRHoCBcV+UCgHgC+j9AO3FxfygNU3o/Gw3gxRU9ERFvZXYDmyfra+ZsHaB8n+w4af6jNhBw1m6GhSwJDa0MaX4kgD1SQJ3320VJBmCpqJx0Vp4E2QesXC8GtGdtmW2UBGqMTWPCv5IizmKxnBOjDCeyfGzAm2EUIZ22uGaD2h0VIExHR9nY+heuIEV82HfmsAJX1VR3jszq0l69R0IOsIHSW+qEsaulhumD2pyxAi2voZHvGcXl+Uf9/0Jeye0xERNvTAlRE6Ht77UVES1/G8neZWmj0jsVo57CD8fyUYQh3wwB1z/U0lyPD1QFfRNbU25Am1/kRaD5A1xuB+tfGsDXX1nKAxnLaN+t/cQ2drFe7VxuSHIG+C7Gy+wV9GXx0GKBERDtiBGj2Mxb9d5/zn7FULrLwk5IgEoEwlP83myA6Ev+jhUb/gy0CNErryOPH4vgGAZrWb6j3kCl5jlNtYzTfJ64tuu1v+A5UexAoDND8O1Bx2r35DjT+VPYONA1Ib/4AoNrV+5/V+Kv4Hahx/xIyxB0EN6NsEVQ8jNB5mPdeBr8tQjddViSvyTOuiQFKRPSSzACVxBe5vnrWsmx47yOMsy9yZTZcrG61XdRuL5amcLMVo7aPxs3pRu9AjfrZ/6nVr/rK1btFoOQlNfOrcEtWriZKV+E+YXD1o1W4wrCFQIzak/PlCuRL8x1yUuOmVrAKV5n2cFpJp7+z+6Luabay2RfXNV+EJEx/F/dY1bMPGmj/yilcIqJdWQ5Qw3wFah29VcO8V4yBQUREu1ISoFKM3rED5w2u3mSAEhHRrqwRoMK0i1Cf+nwjGKBERLQr6wUoERERGRigREREW2CAEhERbQz4G2Y8idhfq+3qAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Prénom producteur'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="562,216" sap2010:WorkflowViewState.IdRef="NTypeInto_23" ScopeIdentifier="2884740f-d4b7-462e-8d9f-2bb03826191e" Text="[Pre_Prod]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://beta.geoprod.com/gestion-utilisateurs/fiche/nouveau" DesignTimeRectangle="323, 513, 460, 57" ElementType="InputBox" FriendlyName="'Prénom producteur'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;app-root&amp;gt;app-admin-layout&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;app-add-utilisateur&amp;gt;form&amp;gt;div&amp;gt;mat-tab-group&amp;gt;div&amp;gt;mat-tab-body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;mat-form-field&amp;gt;div' idx='5' parentid='mat-tab-content-0-3' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='mat-form-field-wrapper ng-tns-c60-40' parentid='mat-tab-content-0-3' tag='DIV' aaname='' /&gt;" Guid="6352bfaa-62ed-4be7-8b94-302e7c893209" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAdAAAAA9CAYAAAAd8DjoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAVUSURBVHhe7dzbaxppGIDx/dNFJAxFliFIyIWUGLCQJUIstdCy5sKwgTU0UEMsG6i5kBKKF3ORCwlB3v2+mW+cg5OMvnFhSZ8fzIVzngn4OIf2NwEAABsjoAAAKBBQAAAUCCgAAAoEFAAABQIKAIACAQUAQIGAAgCgQEABAFAgoAAAKBBQAAAUCCgAAAoEFAAABQIKAIACAQUAQIGAAgCgQEABAFAgoAAAKBBQAAAUCCgAAAoEFAAAhf8koJP3dakdDOXefQYA4LVJBfROen5FKpXsUKs3pffPBimcX0rLa8r5L11Pcw4qvvR+uI8AgFdnJaCtL+6jE3zriF9tSH/mRpSY/dmQxumaM79aWw7oj574fs/8hQAA/xelATUJlf5e0Xg8jYACwGu3RkBn8mk3GX/30ZfKwUBGxw2pVVPz/xxKe7cW3fqt+dK+SK5Cw2UO7TJ+uEylWhP/eJR9RhqMpLtfj5a3098NZbZw04zLw4pZZiDdPbeNelP60yC1Tk/2T6du7gI2QpWWDK7MFXXNzG9vT+92ZBS46cZTx/Z4O5BWfGzVujQ/3mT3PXfsnSszfzqgbtuX7qMVnZPUmPsb6b1Njr/+tic3ZiPhfHZcPKRCOrtop46lLcOfboKxsv783zc+H1870tgx68jMCwAoUxLQRwn+bolXbcr5PBoTfjGbWLXOpnL/EI2T+Ujanhl34WoUjKXjJwGJl2kvpw+ltVOTo+voo8hEunUTyA8Ts0XjIZDhoSfeH+NwqmUDWvFaMnSrmH6I1tk8c6Ge2iA0pJ8KYkYYjIp4JsxBGOZHmdh1pIJUfGzn0rTj4n2fT6RnflAsb1Mvcvu+MPv+zjNR2ySgd+GPFP9kvNy3u7OenMe/QezyuSvQ+de2eKnzEd5qzx9LaUDN+TA/GKb34Z4DADZQ/hJRw1yl3CZfsOEX815f0p0KThtSaZ6La2xo9tkX/2P0dR4uk5s+PDDB+OwKcX0ktTddk9EU+wVfNdFxV6E2oN5Jag67zM6RJIk1IXvzzG3TMBi56YuRHO140v0efVz32ORLKwnvU/u+SUC/d8UzxzJKXXFn2OUzAY1uqzf/ypxxE+Hcj5bSgD7zgwMA8Kw1buFmrX4xu3G58IaDm69omfCWrAtsJkhL2eeImfmtlajY/S8LaDZi+WN+8thy4zLrWmPfi7adWW/hOlIKj7XgfJvh6WMpCmj+fAAA1rWVgIZXaQdD92lV0TKZIK55BfrygOanj1evQIuOrewKNHMlbOS3VRCryYmXbKtoHWl2+d97kjzhdS92XbiPBVaPxV6hE1AA2JatBDT6t5++dL/F9wMfJbgeyKULSGlA7Zd7/jliwTPQlwe04BloPQl38bHlnoE+5J6BFu17/hloGOqaWUf06tHjrdkX++LTclvJOuZFz0CDvjTM+rqpW+lzE3Fvtyvj+JQ/BDI+u0zORxjllgzDTbpjTV2hElAAeJntBNSyb6I24jdVo7dI4y/38oAa67yF++KA5t/CLXtzNVL6Fq7Z985zb+Ea9+nt7ndlcJzbVu7447dwY9PTptRtdFPRs2/hhm/Qhtu1+xW/hGTdZ9563n8/kA63cAFga1IBfeUIBgBgiwgoAAAKBBQAAIVfJ6AAAGwRAQUAQIGAAgCgQEABAFAgoAAAKCwDenV1xcDAwMDAwFAyLBbR/1jDFSgAAAoEFAAABQIKAIACAQUAQIGAAgCgQEABAFAgoAAAKBBQAAAUCCgAAAoEFAAABQIKAIACAQUAQIGAAgCgQEABAFAgoAAAKBBQAAAUCCgAAAoEFAAABQIKAIACAQUAYGMi/wItUcjjNk6rnAAAAABJRU5ErkJggg==" InformativeScreenshot="9840f2ff718fc4f100432db5ecea96a8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Geoprod' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="323, 604, 949, 16" ElementType="InputBox" FriendlyName="'INPUT mat-input-30'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='number' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='number' class='mat-input-element mat-form-field-autofill-control ng-tns-c60-42 ng-untouched ng-pristine ng-valid cdk-text-field-autofill-monitored' aaname='N°ORIAS producteur' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Qualité producteur'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="562,216" sap2010:WorkflowViewState.IdRef="NTypeInto_24" ScopeIdentifier="2884740f-d4b7-462e-8d9f-2bb03826191e" Text="[QA_Prod]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://beta.geoprod.com/gestion-utilisateurs/fiche/nouveau" DesignTimeRectangle="813, 513, 460, 40" ElementType="InputBox" FriendlyName="'Qualité producteur'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;app-root&amp;gt;app-admin-layout&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;app-add-utilisateur&amp;gt;form&amp;gt;div&amp;gt;mat-tab-group&amp;gt;div&amp;gt;mat-tab-body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;mat-form-field&amp;gt;div&amp;gt;div&amp;gt;div' idx='11' parentid='mat-tab-content-0-3' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='mat-form-field-infix ng-tns-c60-41' parentid='mat-tab-content-0-3' tag='DIV' aaname='' /&gt;" Guid="359a71b8-e6ac-4521-ae25-479dbd856509" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAdAAAAAsCAYAAADVeunWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAViSURBVHhe7dxBa9tIGIfx/egiiCAWUUwwSw/CxIGEpmyhLlWgJQ6sQ1zq0EAd4kNg3YMpZjGLDz6YEszbGWksj2S5jifxbrP7/EBQSdE7Gh3894zG/UUAAMDGCFAAABwQoAAAOCBAAQBwQIACAOCAAAUAwAEBCgCAAwIUAAAHBCgAAA4IUAAAHBCgAAA4IEABAHBAgAIA4IAABQDAAQEKAIADAhQAAAcEKAAADghQAAAcEKAAADggQAEAcECAAgDg4OkG6LQt0U5F4oHZBwDgH7QcoOOexLVQ/B1PPE9tu6FEJz0Zz8z5RzI8qYh3cGX2RK4OVFvW/jr6+vB13+z9+4r9AQD8t+UDdHIl9SCQ56d9mc4DczqQVi0Qr9qUoTn0GNYFjj5fOVnR4qwrx8+OpffIof4Qjx2g+gtF/ZPZAQD8dKwAnUq75pWP6mZ9aYSeRB+m5sDDPShAf0IEKAD8v1gB2pXDnXDlO8UkIPY7Zi/9gM8HnBq9ehWJv5rdya00D6rZVLAf1qX9lzmnFANnUW8occVMH5tt0c5Ebk8iCU3NsBbL7cScKpHUfNuRZi1Ma6n+RWp0fWfOy9dYKl5dWp9fSXVXnZ/fz2ws3TfPs3b8vUPpWPe+fB9N6by1+1N4FtqnuniVODeKH10eSsVPa3i7VTm8HKmj+lpzzGxZkKpnqqfXk+O6Lye36k4M0xc7wkuf8Zv0efj6/bF9fwCAjSwC1HwAd1ZNixYCYG2Ajq6k+XGQTQWP3lfFq7XVODe1OkBT+ny+vjr2Xl2zF0v/m967k+EfKsRUjVXjYl3T26lK/MVE5rgj9cBXgWSuSPrsSbDfksEki1Xpv1EhZbUz/liXIFhMGU8uIvEC9azG6f7dl1iqOkw3CNDp50NVM5LWcH5vPYnPeum/FX3v+RHoUN7t6S8E5gvAt6G0orDQl/UBqp9H42a0mKIHADjZXoAW6frW9ZsHaE+OdwNp/Gl2E3rUnA8NWxIYVhva6FQFeWSCPOlzVZomCFNl7aSj4jTQxtL8zZPoIh/b+bbWBehU2pEn1VM94iyn6+UC9OZY/F8bkptgVyGctXnPAPVfLkIaAOBu61O4gRrxZdORDwpQXd/UyW2rQ3v5HhU7yEpCZ6kfxqKWHaYL+f6sC9DyGjbdXu68vr6s/z/oy7pnDABwZwWoitAX/r0XES19GOvfZVqh0T1So539tozmlwxiCTcM0PCtneZ6ZLg64MvomnYb2visOAItBuj9RqDVs9ywtdDWcoBO9bRv1v/yGjZdr35pdjQ9An0Wy8rul/Sl/zogQAFgS3IBmv2Mxf7d5/xnLHvvsvDTkiBSgTDQfzcbS+dA/Y0VGr2XvgrQTlpHnz9S5zcI0LR+w7yHTOlrglpLhvNj6t46F70N34FaXwRKA7T4DlRddpl/Bzr9sO4daBqQlfkXANOu3f+sxt/l70Bzzy+hQzyQ6HyYLYKaDjrSvpn3Xge/r0I3XVak76mSuycCFAAeUz5ANfVBbq+e9TxfKi86Mso+yI3ZYLG61Q+lfvFuaQo3WzHqV6Vx/mqjd6C5+tnfmdWv9srVj4tAKUpqFlfhrlm5mli7CvdO+qc/WoWrDJoSqVF7cr1egfw+/w45qXFeL1mFa0y68movnf7Onot5ptnK5qq6r/kiJGVyrZ6xqec/b0jrd6ZwAWBblgM0Z74C9VC6q4Z5PzECAwCwLWsCVJtK9yiQ4Amu3iRAAQDbco8AVSZXEttTn08EAQoA2Jb7BSgAAMghQAEAcECAAgDggAAFAMABAQoAgIMsQK+vr9nY2NjY2NjWbLNZ+j8LMQIFAMABAQoAgAMCFACAjYl8BxmY+LZQ6AmKAAAAAElFTkSuQmCC" InformativeScreenshot="2a803e1fc0f6160659549532215deab2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Geoprod' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="323, 675, 460, 23" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl name='heure_debut' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='heure_debut' tag='INPUT' type='text' class='style-timePicker ng-untouched ng-pristine ng-valid' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAdAAAAAbCAYAAADMBd7DAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAN/SURBVHhe7dzRa9tGAMfx/dPCiIIJJswFMepA8yiGKfTFg44ahkvMWEsMM6XKgxmBeDAPEoJh3oMfDEGUX++kkyzbsp3IexjO9wMHvVhRznn59uRrvxMAAHgyAgoAQAUEFACACggoAAAVEFAAACogoAAAVPA8A/oQKawF6t27OQAAT1QS0Kn6gaf2yE3XjN5sf+1/ZdpX4LVVttTpRaDm+4mbpez7Ci6mbgYAwG7PL6Bfr9V52dH4q5s7/0lA7c8M+uY3CAA4ds9yB1qGgAIAnuLwgC4m6ocN+Z4nz28ovJho4V4yV6vtBeoXizJqyytEJgnXL5E+hk35tcK1/0bq/ODLs/d9EahzNXMvlFv81Vd4ml7vn4YaXPXWArrQ5CJUwzf383w1wr4my4Wm6/gQabDtvZQE2T4K9t6kX0n+bL8vG4QUAI7a1oCuxGBtLANqrn3lq/XhVrGdxjMToKZ5PZkZjwuo57fUvZkpzh6rPlzr7Uld7at5Op+P9S5Yu0/RYqiwVrg+vlXvzMZ0Gbzpry35r3q6TReq2WWopolfvlK3jt6d+8o8UvvEU/jFzfcENMEOFACejcN2oDcd1U+7WjmO88fbQlQeF9D6T2M3S80vX8sLh3ncrJkJ4LZHrGXXJz8nD95YnXpD3b+TiWMiXVsGMQloMYbGyn0JKACg4LCAJpFa7kzzkUfkkY9w18K48Tg0G2uBy2yEzFoJnl1Hyf0Kaytbx8paCSgAoODwHejL3o5gbAY0/hzuDWiy82tHbrZfcv35QO4BbmpjB9rc+e8+7To2dqCfWjt3oJP3jc2A7vx9AACOxYGHiOy1dYW/z/LHp/F9pOFNNptrcG4P57ikuM8V9wVUDya8Jy11/8ySGGt+M9RoW5mS/xhhz2egZrdY/3GoWba0h6miz+N83UlANz4DNffMP8+1EbY/Iz1WFN/11KqtRXc+0GvzF4b8HgCAo3VgQI3kFK49QWsfifqqn3UU/VMIyP1geTr2+7aGv+1/hJuwp3DP6umJ2JqvZtjXeGWLuSq++/ioU7jNF3ad5hoT6M6XZfiTdayfwv3kDkc5i+t3CpLvN+/zvKvhz5uPjqeX2Unf1d0qAOC4lAQUAADsQ0ABAKiAgAIAUAEBBQCgAgIKAEAFBBQAgAoIKAAAFeQBHY1GDAaDwWAw9owMO1AAACogoAAAPJn0DQ1gzFXPAPOeAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <Assign sap:VirtualizedContainerService.HintSize="562,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[No_Prod_1]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[Convert.TOInt32(No_prod)]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'N°ORIAS producteur'" sap:VirtualizedContainerService.HintSize="562,154" sap2010:WorkflowViewState.IdRef="SetValue_1" Text="[No_Prod_1.ToString]">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="314dc2c1-1ea9-4b41-9a8b-92704b86f6c7" InformativeScreenshot="4afb3e4cfda8657ce25a0079fb7d1b71" Selector="&lt;webctrl tag='INPUT' type='number' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="562,386" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,308" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'N°ORIAS producteur'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_25" ScopeIdentifier="2884740f-d4b7-462e-8d9f-2bb03826191e" Text="[No_Prod_1.ToString]" Version="V1">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://beta.geoprod.com/gestion-utilisateurs/fiche/nouveau" DesignTimeRectangle="193, 468, 1079, 40" ElementType="InputBox" FriendlyName="'N°ORIAS producteur'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;app-root&amp;gt;app-admin-layout&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;app-add-utilisateur&amp;gt;form&amp;gt;div&amp;gt;mat-tab-group&amp;gt;div&amp;gt;mat-tab-body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;mat-form-field&amp;gt;div&amp;gt;div&amp;gt;div' idx='13' parentid='mat-tab-content-0-3' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='mat-form-field-infix ng-tns-c60-42' parentid='mat-tab-content-0-3' tag='DIV' aaname='' /&gt;" Guid="c5375372-9dba-43f3-8783-bf986c50a663" ImageBase64="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" InformativeScreenshot="ab2eb956bdef26d0d26d518ae3779237.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Geoprod' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="748, 557, 525, 23" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl idx='2' name='heure_debut' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' name='heure_debut' tag='INPUT' class='style-timePicker ng-untouched ng-pristine ng-valid' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAhEAAAAbCAYAAADCmt1dAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKTSURBVHhe7dtBi9pAHIbxfulhCQthCQULoayH7TGUsOBFqFB7cFF6WqGy1D2EZaH2YMGleLAHD0IJ5W0SY43Rqh3B2vL84H+YTDJJTvMykzwTAACABUIEAACwQogAAABWCBEAAMAKIQIAAFghRAAAACuECAAAYGU9REShjN/ROG+uGHfk/67vLxq3fRlj1us6Wvaf4HMDAPAv+39CRB4YAADAcRAiAACAlYNDxOS+Lv98vn3gvKyr/y3vSKxP7mN1fKNwcSgdz4TqPjRUvXAK5840bAfynHRcR17Q0XCWd22wK0SU+6NrI/+mr27gyUm3PRxPwe2pRSMAAE7b5hBR/K6gXIUQET/U5F6E6k/n7ennxkrI2C9EGHlhT6NZnB9MDr+vyrlsaZQdijW5DVRJxlmesSq7T/k5k1rcZ1OIME5Vraf5iPFTK3mOK3Xz9wAAALsdsBIxVfeVUXBXnNon6lz66uQX7xciypP3QHXXU/NL3sw8qnYWqjhS0fp9Vm0KEd7bYd5KjdV6YVR7yJsAAGCnA0LEPBD8yQrA4prydsbq9B8p3DCmMctwUmYTIvx2cbDScwEAgJ0OXokI77PGRuuT+1DN57tCRLoSUVHra97cAyECAIDjO+jDyjg5171sarDYjoinGnyIltd+qst1Q/WzjyJjjW6q2arC9hAxn/Td1z1NFjsl38fq3w22fxNBiAAA4KgOChGp9O+M7M+KdMvhvKKgPdD0R96pmR7f+HLOkj7H1dW7nho7tzNS878zKou/Pi6qqn+cECIAADgh6yECAABgD4QIAABghRABAACsECIAAIAVQgQAALBCiAAAAFYIEQAAwMqvEBFFEUVRFEVR1NYqYiUCAABYIUQAAAAL0k/X7lwhenpgIgAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                </Sequence>
+              </ui:CommentOut.Body>
+            </ui:CommentOut>
+            <If Condition="[samedi=&quot;ON&quot;]" sap:VirtualizedContainerService.HintSize="562,438" sap2010:WorkflowViewState.IdRef="If_24">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,250" sap2010:WorkflowViewState.IdRef="Sequence_56">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="css" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Samedi OFF'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_25" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2884740f-d4b7-462e-8d9f-2bb03826191e" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://beta.geoprod.com/gestion-utilisateurs/fiche/nouveau" DesignTimeRectangle="974, 596, 35, 17" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;app-root&amp;gt;app-admin-layout&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;app-add-utilisateur&amp;gt;form&amp;gt;div&amp;gt;mat-tab-group&amp;gt;div&amp;gt;mat-tab-body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;label&amp;gt;span' idx='7' isleaf='1' parentid='mat-tab-content-0-3' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='slider round' isleaf='1' parentid='mat-tab-content-0-3' tag='SPAN' aaname='' /&gt;" Guid="270893d9-13ec-4b7e-b268-f0b5e937a288" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACcAAAAVCAYAAADFEfeTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEDSURBVEhLzZXtCYMwEIYLbtCFXMCJXMANBIdwrVaEfvwx/VWuPMJJmkRaawp38CKaeO9j7mIOYjhswznnJKVpGOTWNDKWpZyPRzkVRTaRj7zkxyflj5Jw97bNDrQmfPBLcURw17peXrxUlTz6Xp7jOC8zV+557hvkEL4hyxscX6CTp66bgdaCcT95DoUruMBRey3lJzCN3ID4+z24wNGcTKBkWyJ3ieGI4Ng9DNJTW4L5ocEewRHBaUm1+b8N5ocGewRHBKeDv4SfPIciONMrZ7rnTO9W0/85ZPaEUJk9W1V8gZb438InXDFVEg5Re5qT3ZMblHzkJb/fY6FW4SzIMJyTF2ecbizrWN9MAAAAAElFTkSuQmCC" InformativeScreenshot="225ce0c6979b76d427da08255051cc32.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Geoprod' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="956, 706, 82, 26" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl parentid='ID2020__Neopolis_Corp_Tous_Dro' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ID2020__Neopolis_Corp_Tous_Dro' tag='IMG' type='' class='' aaname='logo' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_57">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Enregistrer'" sap:VirtualizedContainerService.HintSize="562,156" sap2010:WorkflowViewState.IdRef="NClick_27" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2884740f-d4b7-462e-8d9f-2bb03826191e" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://beta.geoprod.com/gestion-utilisateurs/fiche/nouveau" DesignTimeRectangle="1138, 208, 189, 48" ElementType="Button" FriendlyName="'Enregistrer'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='btn-dt-save' aaname='  Enregistrer ' check:innerText='Enregistrer' /&gt;" Guid="f1a81b0b-b70a-4ed8-9f8f-efbd47df61da" ImageBase64="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" InformativeScreenshot="ca355ec4858bcb5488104ba32faec75c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Geoprod' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1081, 221, 42, 42" ElementType="Button" FriendlyName="'BUTTON'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;app-root&amp;gt;app-admin-layout&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;app-add-utilisateur&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl class='btn-load' tag='BUTTON' type='button' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAYAAABXuSs3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPFSURBVGhD5ZnPbw1RFMf9PVjbEVYklmIlYq0bEUEifiQW2FgQvxaValIlRUuCFFVFET+iKVUpVYpEVVPS+hESvu4nM/M67717580d0/f64pPc5HXeefd8586555y5nac65f8WfuetdPC+tP6StLJVWtQoLTgSDD5zreFyYINtHmQW3vdB2nkjELa2w4h6IF1/LY18lqZ/Sn+MDYPPXOM7bLDlN/yWObLiLRxnrOyKk1LjY+nj1/ALD/gNv2UOnkSWG/ASvq9XWnJCOjUQXsgB5lrcJO01c/uQSvjQhLT6jLTDPN7pX+HFHJky4cTc+MBXGioKZzMRk3musgt84CvNBk4UzgRkBjZWtegakRYerSzeKZxHxt1XU3QE4vGdFDZO4cRbNcLDBb7R4MIqnOzBZqk1aHBlmzLh5FTSEzu91qABLbY8XyacgpA1RCZ/SJdfSsceSZuuStu6pbOD0uCn0CADrU+DgldKkXDujGqWhXPPg55kvslCtrHuvHT3XWhs2H9POp1ygZa3lK96kXD6B0qxL6yuTaxtIHjjleAzN5OG433le65IOCnIt/fYc7tY2IZOqcOs/vspaczM1Tksbe0qtolGWuHMg7Y4BeEkfDo3Hw4/nBGxrFkaGA+/sNDcXyyakVY4oC1elArC6ZVpO31Y1TYj4tZoeNFBFB7x4SO8VF9BONnEp0qSKSIBm6+FFx0cMg7jgqPhI5xq2hDLLgXhZAQa/rTExfS8CS86mPge2JeO4cnQIAWvjC0aIwrCCX7eVuYqFKP4Bi0IpwvkVWuu8tuIo2uMyCy81+xw2+Mf/xYaOCCsiG0G9mlxCvcNFRzHN1o0KolhI0e25Pq0OEPFd3PahJPykmC1I1ufjALOzUkj45MObcLbTcV0QXFaaopUZOsTJuBMh74FyBUq201HeGEoCIPRL1Lbs6ANiNvsvhlO4oGzAPmW/Eg44cGLR1xY0qAhy4Kz5APBn7bJajId266e8A9DtwmzNe12sQzik9Y3C4lNFmRta+P0j0ktT6QtJnsQIgfMI774InjJyErFtvZfXiRmEzQlvkgA2aWWb/eloCWeTSLKhHNnnA/OxlGbL14vyzCXjifQYsMqHOryQAhqeQSHT3xnOoIDEn61Dz3xhc94sbGRKByYgLuvRtjgA1+VRENF4cAjI97YLLNxNEcGY258JIVHnFTCI9jhpKc8V5+5SL+u7OHCSziQUzkRyOufVxQ8W56uhLfwCJzV1b8LbbCZ6Jd5EnSBCCMzMPjMNVYWmzQbLw25CK8FdSpc+gufRqSOPjmwiQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Actualiser'" sap:VirtualizedContainerService.HintSize="562,156" sap2010:WorkflowViewState.IdRef="NClick_28" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2884740f-d4b7-462e-8d9f-2bb03826191e" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="80, 46, 28, 28" ElementType="Button" FriendlyName="'Actualiser'" FullSelectorArgument="&lt;ctrl name='Geoprod - Google Chrome' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Actualiser' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Geoprod - Google Chrome' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Actualiser' role='push button' automationid='' check:text='Actualiser' /&gt;" Guid="7572440a-2f3c-4ffa-9aa0-b0bba5bc8bae" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEkSURBVFhH7ZU9C8IwEIb9Uzp008FNwbGDm4KjgqOCv8EP3BQc/doEXUXHov4Hta6ie+SNpKQhrRdQRMzwQO1d754mZ5pIphz2TayAFbACVsBYIJ3Jsna3z7zdgV1vdw6uB8MRj4m88XQeei4KI4FGs8WOZz9orIIYctAcv3U1VMgCKCwaoYHrFoMYrkVTGfn5KEgCWFrx5hDR5YD1ZvsZgU6vzwvG7etHV8DbPwdOXnYZXXOgy1UhCZgUNOU3BF5tgQwGdrFc8bnRxVXeNoQCMQ+UXEASwFud/AsvHPc3lM+KXL6gzVEhCYDQQTSZhbajVK7weyIeJ6lCFgDVWj1YCR2ImTQHRgIA24GZEIOJpjgBcU/+GFExFng3VsAKWIF/F3DYA/kxQPRA+e04AAAAAElFTkSuQmCC" InformativeScreenshot="d1d47f90954e131c5c256e75a60528a8.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Geoprod - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="8, 8, 256, 35" ElementType="TabPage" FriendlyName="'Fermer'" FullSelectorArgument="&lt;ctrl name='Geoprod - Google Chrome' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Geoprod' role='page tab' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Geoprod - Google Chrome' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Geoprod' role='page tab' automationid='' check:fulltext='Fermer' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAADUUlEQVRYR62X+04TQRTGzyP0EfoIJL5AH6GP0DeAiGDES0bxAihWxRCj0RrkVtuyXcX7Zb2AIAobjdFEDCCpLUXoPsLxm3a6rXVn2679ku8PNqdzfrtz5pyBWtZMLkx3NgVNblk0scF0+wfTze9MN74xXfvCNP6Zacy26NJHQRdXwupXHVCqEKFk3qLZHNP0NgOAfQAYAEyj75lG3lk09DaiVgmgzG6I0sU4pXYYABwAgOncG6bTVpxOPQ+pVVvU+KcwAGwAcAcAmE4+s+nEkxa3xdgLIalDc7vcQQCm448dOvqwCUS/GQKADXMTAAMAAgARAEQAIPDVjCYATAMPbDp8z2c7svtxmH0ADJr6qX+LsbUwAAw9wDzjJeMqukFmKVxOrgX4FVORzTW6HPMBYDo05/ESZimhBbhb6FFRrWtksUcL0JtJqKg6mSVHA2CpiPaVWK80rapvrVcK9artqAglsxSBK8n/BQjeTORv5RoZrGX8rqwr15e5ZE5XZkloADZVRHDJNbwBhIqA9ADBP39Vco3AAJnduqCAShdFMIBUQXY3Q0UEV7potA8gO97QAtPgC1tFBFe6aLcCEHUBZG8XT2Gc3cGXTGdeBZ/tqZ0wAHSnIKqiILMUKj+8/pXpyH2mY49qAGdfB6+D1I7wAWiYCfEVg/qyXgAOLhZtznMomcdULTgaAI/a6s1EvAHQTocX2i/GZN4oF7InwL6mufVlLU+AkUWmC0se/VujmVyiPMC8AXx6S78ZBoDjDbDMFP9g0OVV/XZMboVoCiN7BqPbG0DOmyZFPTAf8wFgurLWMEiUJjZwa95yAMA+AHWV76XmXwAAq+5oLhzoisJd6k8CAC4svgBNWntf1tbXQBnArQOZGGbYgSvbUtkC2wdA1oDmRnQwndCeggqAjX84yolkQnhTAUjX3mx6uwsAjg+APAUNW9GdjAKAfY6hQ+eX3OJBQqMuedW1hjWbi/oD4PIjr4CuupMRAAgACAAIAAgACAAIAAg0InefkainIXG9a+c7mY8CQHZCOQ0FAOA9AQA5d6Tbb25IUN13nWv10GnJheH6fdf5/0e4l+TCdUnkmyZgeQylG2ui/Vu0n7BgDHaTqsd/Cc/lF5JxVZgWxjjRHyo+68rAeejQAAAAAElFTkSuQmCC" InformativeScreenshot="70dc3f073f54002e3093958aeac87193.png" Selector="&lt;html app='chrome.exe' title='Geoprod' /&gt;" Url="https://beta.geoprod.com/gestion-utilisateurs/fiche/nouveau" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
